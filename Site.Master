@@ -1,0 +1,32 @@
+﻿<%@ Master	Language="C#"
+			AutoEventWireup="false"
+			CodeBehind="Site.master.cs"
+			EnableViewState="false"
+			Inherits="WebTest01.SiteMaster"
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+
+<title>Webtest01</title>
+
+<script type="text/javascript" src="<%=JQueryUrl%>"></script>
+<script type="text/javascript" src="<%=LongPollingClientUrl%>"></script>
+
+<script type="text/javascript">
+<%-- Init long-polling message handler --%>
+window.message_handler = new LongPollingClient( <%=LongPollingHandlerUrl%>, <%=LongPollingSyncedHandlerUrl%>, <%=LogoutUrl%> );
+message_handler.start();
+</script>
+
+<asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
+
+</head>
+<body>
+
+<form runat="server">
+<asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+</form>
+
+</body>
+</html>
