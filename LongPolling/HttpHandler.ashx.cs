@@ -12,9 +12,9 @@ namespace WebTest01.LongPolling
 	{
 		internal const string					BASE_URL								= "~/LongPolling/HttpHandler.ashx";
 
-		public static TasksQueue				TasksQueueStatic						{ get; private set; }
-		public static MessageHandler			MessageHandlerStatic					{ get; private set; }
-		public static ConnectionList			ConnectionListStatic					{ get; private set; }
+		internal static TasksQueue				TasksQueueStatic						{ get; private set; }
+		internal static MessageHandler			MessageHandlerStatic					{ get; private set; }
+		internal static ConnectionList			ConnectionListStatic					{ get; private set; }
 
 		protected override MessageHandler		MessageHandler							{ get { return MessageHandlerStatic; } }
 		protected override ConnectionList		ConnectionList							{ get { return ConnectionListStatic; } }
@@ -28,6 +28,10 @@ namespace WebTest01.LongPolling
 			TasksQueueStatic = new CommonLibs.Utils.Tasks.TasksQueue();
 			ConnectionListStatic = new CommonLibs.Web.LongPolling.ConnectionList( TasksQueueStatic );
 			MessageHandlerStatic = new CommonLibs.Web.LongPolling.MessageHandler( TasksQueueStatic, ConnectionListStatic );
+
+			// Registering message handlers
+			MessageHandlerStatic.AddMessageHandler( "Master_Ping", SiteMaster.PingMessageHandler );
+			MessageHandlerStatic.AddMessageHandler( "Test01_TestCrash", Test01Crash.TestCrashHandler );
 		}
 	}
 }

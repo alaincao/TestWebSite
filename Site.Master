@@ -10,13 +10,15 @@
 
 <title>Webtest01</title>
 
+<link id="cssJQueryUI" rel="stylesheet"/>
 <script type="text/javascript" src="<%=JQueryUrl%>"></script>
+<script type="text/javascript" src="<%=JQueryUIUrl%>"></script>
 <script type="text/javascript" src="<%=LongPollingClientUrl%>"></script>
+<script type="text/javascript" src="<%=MasterJsUrl%>"></script>
 
 <script type="text/javascript">
-<%-- Init long-polling message handler --%>
-window.message_handler = new LongPollingClient( <%=LongPollingHandlerUrl%>, <%=LongPollingSyncedHandlerUrl%>, <%=LogoutUrl%> );
-message_handler.start();
+window.pageParameters = <%=Parameters%>;
+master_init();
 </script>
 
 <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>

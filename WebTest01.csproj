@@ -52,9 +52,25 @@
   <ItemGroup>
     <Content Include="CommonLibs\Web\LongPolling\JSClient\LongPollingClient.js" />
     <Content Include="CommonLibs\Web\LongPolling\JSClient\LongPollingFileUploader.js" />
-    <Content Include="Foo.aspx" />
+    <Content Include="css\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="css\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="css\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="css\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="css\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="css\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="css\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="css\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="css\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\flick\jquery-ui-1.9.1.custom.css" />
+    <Content Include="Test01Crash.aspx" />
     <Content Include="Global.asax" />
     <Content Include="jquery-1.8.2.js" />
+    <Content Include="jquery-ui-1.9.1.custom.js" />
+    <Content Include="Site.Master.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -92,12 +108,12 @@
     </Compile>
     <Compile Include="CommonLibs\Web\LongPolling\Utils\GenericPageFile.cs" />
     <Compile Include="CommonLibs\Web\LongPolling\Utils\PageFile.cs" />
-    <Compile Include="Foo.aspx.cs">
-      <DependentUpon>Foo.aspx</DependentUpon>
+    <Compile Include="Test01Crash.aspx.cs">
+      <DependentUpon>Test01Crash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Foo.aspx.designer.cs">
-      <DependentUpon>Foo.aspx</DependentUpon>
+    <Compile Include="Test01Crash.aspx.designer.cs">
+      <DependentUpon>Test01Crash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
