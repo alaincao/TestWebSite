@@ -17,16 +17,19 @@ namespace WebTest01
 		private string						JQueryUICSSUrl				{ get { return Page.ResolveUrl("~/css/flick/jquery-ui-1.9.1.custom.css"); } }
 		protected string					JQueryUrl					{ get { return Page.ResolveUrl("~/jquery-1.8.2.js"); } }
 		protected string					JQueryUIUrl					{ get { return Page.ResolveUrl("~/jquery-ui-1.9.1.custom.js"); } }
-		protected string					LongPollingClientUrl		{ get { return Page.ResolveUrl("~/CommonLibs/Web/LongPolling/JSClient/LongPollingClient.js"); } }
+		protected string					LongPollingBlock;
 		protected string					MasterJsUrl					{ get { return Page.ResolveUrl("~/Site.Master.js"); } }
 
 		protected override void OnLoad(EventArgs e)
 		{
 			cssJQueryUI.Href = JQueryUICSSUrl;
 
-			ParametersDict["LongPollingHandlerUrl"] = Page.ResolveUrl( LongPolling.HttpHandler.BASE_URL );
-			ParametersDict["LongPollingSyncedHandlerUrl"] = "NONE YET";
-			ParametersDict["LogoutUrl"] = Page.ResolveUrl("~/");  // None yet
+			// Include LongPolling JavaScript client in page's <head> tag
+			var jsObjectName = "message_handler";
+			var longPollingHandlerUrl = Page.ResolveUrl( LongPolling.HttpHandler.BASE_URL );
+			var longPollingSyncedHandlerUrl = "NONE YET";
+			var logoutUrl = Page.ResolveUrl("~/");  // None yet
+			LongPollingBlock = CommonLibs.Web.LongPolling.JSClient.CreateJSClientInitializationBlock( Page, jsObjectName, longPollingHandlerUrl, longPollingSyncedHandlerUrl, logoutUrl, startDirectly:false );
 
 			base.OnLoad(e);
 		}

@@ -1,12 +1,7 @@
 ﻿
 function master_init()
 {
-	var longPollingHandlerUrl		= pageParameters['LongPollingHandlerUrl'];
-	var longPollingSyncedHandlerUrl	= pageParameters['LongPollingSyncedHandlerUrl'];
-	var logoutUrl					= pageParameters['LogoutUrl'];
-
-	// Init long-polling message handler --%>
-	window.message_handler = new LongPollingClient( longPollingHandlerUrl, longPollingSyncedHandlerUrl, logoutUrl );
+	// Init long-polling message handler
 	message_handler	.bind( message_handler.internalErrorEvent, function(event, msg)
 						{
 							// There is an error with the message handler itself (JSON error, etc...)

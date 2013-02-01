@@ -13,12 +13,12 @@
 <link id="cssJQueryUI" rel="stylesheet"/>
 <script type="text/javascript" src="<%=JQueryUrl%>"></script>
 <script type="text/javascript" src="<%=JQueryUIUrl%>"></script>
-<script type="text/javascript" src="<%=LongPollingClientUrl%>"></script>
-<script type="text/javascript" src="<%=MasterJsUrl%>"></script>
+<%=LongPollingBlock%><%-- Include LongPollingClient and instanciate it in global object 'message_handler' --%>
+<script type="text/javascript" src="<%=MasterJsUrl%>"></script><%-- Create function 'master_init()' --%>
 
 <script type="text/javascript">
 window.pageParameters = <%=Parameters%>;
-master_init();
+master_init();<%-- Bind generic message handlers to the 'message_handler' and start it --%>
 </script>
 
 <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>

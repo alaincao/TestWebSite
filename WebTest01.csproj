@@ -50,8 +50,8 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CommonLibs\Web\LongPolling\JSClient\LongPollingClient.js" />
-    <Content Include="CommonLibs\Web\LongPolling\JSClient\LongPollingFileUploader.js" />
+    <EmbeddedResource Include="CommonLibs\Web\LongPolling\JSClient\LongPollingClient.js" />
+    <EmbeddedResource Include="CommonLibs\Web\LongPolling\JSClient\LongPollingFileUploader.js" />
     <Content Include="css\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="css\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
     <Content Include="css\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
@@ -93,6 +93,8 @@
     <Compile Include="CommonLibs\Web\LongPolling\IConnection.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CommonLibs\Web\LongPolling\JSClient\LongPollingFileUploader.js.cs" />
+    <Compile Include="CommonLibs\Web\LongPolling\JSClient\LongPollingClient.js.cs" />
     <Compile Include="CommonLibs\Web\LongPolling\LongPollingConnection.cs" />
     <Compile Include="CommonLibs\Web\LongPolling\LongPollingHandler.cs">
       <SubType>Code</SubType>
