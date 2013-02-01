@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTest01", "WebTest01.csproj", "{9541C81A-0F82-4C52-83B1-C19D771527B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibs", "CommonLibs\CommonLibs.csproj", "{77BE1E2E-3596-4682-B7E2-CFF3A49C68A6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +13,6 @@ Global
 		{9541C81A-0F82-4C52-83B1-C19D771527B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9541C81A-0F82-4C52-83B1-C19D771527B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9541C81A-0F82-4C52-83B1-C19D771527B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77BE1E2E-3596-4682-B7E2-CFF3A49C68A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77BE1E2E-3596-4682-B7E2-CFF3A49C68A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
