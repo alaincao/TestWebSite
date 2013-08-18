@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonLibs\Utils\Debug.cs" />
+    <Compile Include="CommonLibs\Utils\Event\CallbackList.cs" />
     <Compile Include="CommonLibs\Utils\ExtensionMethods.cs" />
     <Compile Include="CommonLibs\Utils\Tasks\TaskEntry.cs" />
     <Compile Include="CommonLibs\Utils\Tasks\TasksQueue.cs" />
