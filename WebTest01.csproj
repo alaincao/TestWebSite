@@ -13,6 +13,7 @@
     <RootNamespace>WebTest01</RootNamespace>
     <AssemblyName>WebTest01</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -104,6 +105,7 @@
     <Compile Include="CommonLibs\Web\LongPolling\MessageHandler.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CommonLibs\Web\LongPolling\RootMessage.cs" />
     <Compile Include="CommonLibs\Web\LongPolling\SyncedHttpHander.cs" />
     <Compile Include="CommonLibs\Web\LongPolling\Utils\ConnectionPersistentObject.cs" />
     <Compile Include="CommonLibs\Web\LongPolling\Utils\ExtensionMethods.cs">
