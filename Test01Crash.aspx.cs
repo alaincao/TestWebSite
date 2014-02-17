@@ -11,22 +11,14 @@ namespace WebTest01
 {
 	public partial class Test01Crash : System.Web.UI.Page
 	{
-		private Dictionary<string,object>	ParametersDict				= null;
-
 		protected override void OnInit(EventArgs e)
 		{
-			ParametersDict = ((SiteMaster)Master).ParametersDict;
-
 			base.OnInit(e);
-		}
 
-		protected override void OnLoad(EventArgs e)
-		{
 			// Some parameters to pass to JavaScript
-			ParametersDict[ "pHelloMessage" ] = pHelloMessage.ClientID;
-			ParametersDict[ "helloMsg" ] = "Hello world";
-
-			base.OnLoad(e);
+			var parameters = ((SiteMaster)Master).PageParameters;
+			parameters[ "pHelloMessage" ]	= pHelloMessage.ClientID;
+			parameters[ "helloMsg" ]		= "Hello world";
 		}
 
 		/// <summary>

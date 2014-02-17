@@ -17,7 +17,7 @@
 <script type="text/javascript" src="<%=MasterJsUrl%>"></script><%-- Create function 'master_init()' --%>
 
 <script type="text/javascript">
-window.pageParameters = <%=Parameters%>;
+window.pageParameters = <%=PageParametersJSON%>;
 master_init();<%-- Bind generic message handlers to the 'message_handler' and start it --%>
 </script>
 

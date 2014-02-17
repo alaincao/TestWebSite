@@ -36,3 +36,4 @@ using System.Runtime.InteropServices;
 
 
 [assembly: System.Web.UI.WebResource( WebTest01.Global.AssemblyName+"."+CommonLibs.Web.LongPolling.JSClient.JSClientPath, "text/javascript" )]
+[assembly: System.Web.UI.WebResource( WebTest01.Global.AssemblyName+"."+CommonLibs.Web.LongPolling.JSClient.JSUploaderPath, "text/javascript" )]

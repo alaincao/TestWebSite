@@ -29,8 +29,14 @@ namespace WebTest01.LongPolling
 			ConnectionListStatic = new CommonLibs.Web.LongPolling.ConnectionList( TasksQueueStatic );
 			MessageHandlerStatic = new CommonLibs.Web.LongPolling.MessageHandler( TasksQueueStatic, ConnectionListStatic );
 
+			#if DEBUG
+				// Increase stale & disconnection timeouts during development so unwanted disconnections don't occures when using breakpoints
+				ConnectionListStatic.DisconnectionSeconds = 60*60;  // 1H
+				ConnectionListStatic.StaleConnectionSeconds = 60*60;  // 1H
+			#endif
+
 			// Registering message handlers
-			MessageHandlerStatic.AddMessageHandler( "Master_Ping", SiteMaster.PingMessageHandler );
+			MessageHandlerStatic.AddMessageHandler( SiteMaster.PingMessageType, SiteMaster.PingMessageHandler );
 			MessageHandlerStatic.AddMessageHandler( "Test01_TestCrash", Test01Crash.TestCrashHandler );
 		}
 	}
