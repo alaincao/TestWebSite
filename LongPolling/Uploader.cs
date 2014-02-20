@@ -31,7 +31,7 @@ namespace WebTest01.LongPolling
 		{
 			CommonLibs.Utils.Debug.ASSERT( receiverType != null, System.Reflection.MethodInfo.GetCurrentMethod(), "Missing parameter 'receiverType'" );
 
-			return GenericPageFile.CreateUploaderQueryParameters( receiverType:receiverType, methodName:methodName );
+			return GenericPageFile.GetQueryParameters( receiverType:receiverType, methodName:methodName );
 		}
 	}
 }
